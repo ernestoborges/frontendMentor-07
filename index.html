@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="jquery.maskMoney.min.js" type="text/javascript"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="title">
+        <img src="images/logo.svg">
+      </div>
+      <form>
+        <div class="card">
+          <section class="input-section">
+            <section class="bill-section">
+              <label class="section-title" for="bill-input">Bill</label>
+              <div class="text-input-container">
+                <span class="person-icon"><img src="images/icon-dollar.svg"></span>
+                <div>
+                  <input id="bill-input" class="text-input" type="text" name="billInput" placeholder="0" onfocusout="calcTip()">
+                </div>         
+              </div>
+            </section>
+            <section class="tip-section">
+              <label class="section-title" for="tip-input">Select Tip %</label>
+              <div class="tip-items-container">
+                <label class="tip-item" for="tip-five">
+                  <label for="tip-five">5%</label>
+                  <input type="radio" class="tip-radio-input" id="tip-five" name="tipInput" value="5">
+                </label>
+                <label class="tip-item" for="tip-ten">
+                  <label for="tip-ten">10%</label>
+                  <input type="radio" class="tip-radio-input" id="tip-ten" name="tipInput" value="10">
+                </label>
+                <label class="tip-item" for="tip-fifteen">
+                  <label for="tip-fifteen">15%</label>
+                  <input type="radio" class="tip-radio-input" id="tip-fifteen" name="tipInput" value="15">
+                </label>
+                <label class="tip-item" for="tip-twenty-five"> 
+                  <label for="tip-twenty-five">25%</label>
+                  <input type="radio" class="tip-radio-input" id="tip-twenty-five" name="tipInput" value="25">
+                </label>
+                <label class="tip-item" for="tip-fifty">
+                  <label for="tip-fifty">50%</label>
+                  <input type="radio" class="tip-radio-input" id="tip-fifty" name="tipInput" value="50">
+                </label>
+                <label class="tip-item">
+                  <label class="tip-custom-label" for="tip-custom">Custom</label>
+                  <!-- <input type="text" name="tipInput"> -->
+                  <input type="radio" class="tip-radio-input" id="tip-custom" name="tipInput" value="custom">
+                  <input type="text" class="text-input tip-text-input" name="tipCustomValue" onkeyup="checkCustom(this.value)" onfocusout="calcTip()">
+                </label>
+              </div>
+            </section>
+            <section class="n-people-section">
+              <div class="n-people-label-container">
+                <label class="section-title" for="n-people-input">Number of People</label>
+                <label class="label-invalid">Can't be zero</label>  
+              </div>
+              <div id="text-input-id" class="text-input-container">
+                <span class="person-icon"><img src="images/icon-person.svg"></span>
+                <input id="n-people-input" class="text-input" type="text" name="nPeopleInput" placeholder="0" onkeyup="checkNumber(this.value)" onfocusout="calcTip()">
+              </div>
+            </section>
+          </section>
+          <section class="result-section">
+            <div class="result-item">
+              <div>
+                <label class="result-labels">Tip Amount</label>
+                <label class="result-labels">/ person</label>
+              </div>
+              <div>
+                <output id="tip-amount" name="tip-amount-result" for="bill-input tip-input n-people-input">$-.--</output>
+              </div>
+            </div>
+            <div class="result-item">
+              <div>
+                <label class="result-labels">Total</label>
+                <label class="result-labels">/ person</label>
+              </div>
+              <div>
+                <output id="total-bill" name="tip-amount-result" for="bill-input tip-input n-people-input">$-.--</output>
+              </div>
+            </div>
+            <button class="btn-reset" onClick="window.location.reload();">Reset</button>
+          </section>
+        </div>
+      </form>
+
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Ernesto "eko" Neto</a>.
+    </div>
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
