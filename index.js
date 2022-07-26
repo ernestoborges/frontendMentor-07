@@ -80,7 +80,7 @@ function calcTip() {
     let totalBill = ( bill / nPeople ) + tipAmount; 
 
     if(nPeople > 0 && tipAmount >= 0 && totalBill >=0){
-        document.getElementById("tip-amount").innerHTML = "$"+(Math.floor(tipAmount * 100) / 100).toFixed(2);
+        document.getElementById("tip-amount").innerHTML = "$"+Math.floor(tipAmount * 100) / 100;
         document.getElementById("total-bill").innerHTML = "$"+totalBill.toFixed(2);
     }else{
         document.getElementById("tip-amount").innerHTML = "$-.--";

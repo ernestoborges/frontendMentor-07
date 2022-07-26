@@ -39,6 +39,10 @@ main {
     align-items: center;
 }
 
+h1 {
+    font-size: 1rem;
+}
+
 .wrapper {
     margin: 0 auto;
     display: flex;
@@ -63,8 +67,11 @@ main {
 }
 
 .section-title {
-    margin-bottom: 1rem;
     display: block;
+    font-weight: normal;
+}
+.tip-section:nth-child(2) .section-title{
+    margin-bottom: 1rem;
 }
 
 .bill-section, .n-people-section {
@@ -147,7 +154,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.tip-item:hover, .tip-item label:hover{
+.tip-item:hover, .tip-item p:hover{
     cursor: pointer;
     background-color: var(--light-grayish-cyan);
 }
