@@ -150,10 +150,15 @@ main {
     justify-content: center;
     align-items: center;
 }
-.tip-item:hover, .tip-item label:hover{
+.tip-item:hover {
     cursor: pointer;
     background-color: var(--light-grayish-cyan);
 }
+
+.tip-item label:hover{
+    cursor: pointer;
+}
+
 .tip-item:last-child {
     background-color: var(--very-light-grayish-cyan);
     color:  var(--dark-grayish-cyan);

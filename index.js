@@ -39,9 +39,9 @@ radioButtons.forEach(function(radio){
     radio.addEventListener("click", function(){
         if(this.value == "custom"){
             document.querySelector(".tip-custom-label").style.display = "none";
-            document.querySelector(".tip-text-input").style.display = "block";
+            document.querySelector(".tip-text-input").style.display = "inline";
         }else{
-            document.querySelector(".tip-custom-label").style.display = "block";
+            document.querySelector(".tip-custom-label").style.display = "inline";
             document.querySelector(".tip-text-input").style.display = "none";
             tip = this.value;
         }
