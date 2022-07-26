@@ -39,10 +39,6 @@ main {
     align-items: center;
 }
 
-h1 {
-    font-size: 1rem;
-}
-
 .wrapper {
     margin: 0 auto;
     display: flex;
@@ -154,7 +150,7 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-.tip-item:hover, .tip-item p:hover{
+.tip-item:hover, .tip-item label:hover{
     cursor: pointer;
     background-color: var(--light-grayish-cyan);
 }

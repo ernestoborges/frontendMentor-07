@@ -20,61 +20,61 @@
         <form>
           <div class="card">
             <section class="input-section">
-              <section class="bill-section">
-                <label for="bill-input"><h1 class="section-title">Bill</h1></label>
+              <div class="bill-section">
+                <label for="bill-input" class="section-title">Bill</label>
                 <div class="text-input-container">
                   <span class="person-icon"><img src="images/icon-dollar.svg" alt=""></span>
                   <div>
                     <input id="bill-input" class="text-input" type="text" name="billInput" placeholder="0" onfocusout="calcTip()">
                   </div>         
                 </div>
-              </section>
-              <section class="tip-section">
-                <label for="tip-input"><h1 class="section-title">Select Tip %</h1></label>
+              </div>
+              <div class="tip-section">
+                <label for="tip-input" class="section-title">Select Tip %</label>
                 <div class="tip-items-container">
                   <label class="tip-item" for="tip-five">
-                    <span for="tip-five">5%</span>
+                    <span>5%</span>
                     <input type="radio" class="tip-radio-input" id="tip-five" name="tipInput" value="5">
                   </label>
                   <label class="tip-item" for="tip-ten">
-                    <span for="tip-ten">10%</span>
+                    <span>10%</span>
                     <input type="radio" class="tip-radio-input" id="tip-ten" name="tipInput" value="10">
                   </label>
                   <label class="tip-item" for="tip-fifteen">
-                    <span for="tip-fifteen">15%</span>
+                    <span>15%</span>
                     <input type="radio" class="tip-radio-input" id="tip-fifteen" name="tipInput" value="15">
                   </label>
                   <label class="tip-item" for="tip-twenty-five"> 
-                    <span for="tip-twenty-five">25%</span>
+                    <span>25%</span>
                     <input type="radio" class="tip-radio-input" id="tip-twenty-five" name="tipInput" value="25">
                   </label>
                   <label class="tip-item" for="tip-fifty">
-                    <span for="tip-fifty">50%</span>
+                    <span>50%</span>
                     <input type="radio" class="tip-radio-input" id="tip-fifty" name="tipInput" value="50">
                   </label>
-                  <label class="tip-item">
-                    <span class="tip-custom-label" for="tip-custom">Custom</span>
+                  <label class="tip-item" for="tip-custom">
+                    <span class="tip-custom-label">Custom</span>
                     <input type="radio" class="tip-radio-input" id="tip-custom" name="tipInput" value="custom">
                     <input type="text" class="text-input tip-text-input" name="tipCustomValue" onkeyup="checkCustom(this.value)" onfocusout="calcTip()">
                   </label>
                 </div>
-              </section>
-              <section class="n-people-section">
+              </div>
+              <div class="n-people-section">
                 <div class="n-people-label-container">
-                  <label for="n-people-input"><h1 class="section-title">Number of People</h1></label>
+                  <label for="n-people-input" class="section-title">Number of People</label>
                   <label class="label-invalid">Can't be zero</label>  
                 </div>
                 <div id="text-input-id" class="text-input-container">
                   <span class="person-icon"><img src="images/icon-person.svg" alt=""></span>
                   <input id="n-people-input" class="text-input" type="text" name="nPeopleInput" placeholder="0" onkeyup="checkNumber(this.value)" onfocusout="calcTip()">
                 </div>
-              </section>
+              </div>
             </section>
             <section class="result-section">
               <div class="result-item">
                 <div>
-                  <label class="result-labels"><h1>Tip Amount</h1></label>
-                  <label class="result-labels"><p>/ person</p></label>
+                  <label class="result-labels">Tip Amount</label>
+                  <label class="result-labels">/ person</label>
                 </div>
                 <div>
                   <output id="tip-amount" name="tip-amount-result" for="bill-input tip-input n-people-input">$-.--</output>
@@ -82,8 +82,8 @@
               </div>
               <div class="result-item">
                 <div>
-                  <label class="result-labels"><h1>Total</h1></label>
-                  <label class="result-labels"><p>/ person</p></label>
+                  <label class="result-labels">Total</label>
+                  <label class="result-labels">/ person</label>
                 </div>
                 <div>
                   <output id="total-bill" name="tip-amount-result" for="bill-input tip-input n-people-input">$-.--</output>
