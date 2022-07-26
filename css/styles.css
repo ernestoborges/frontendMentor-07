@@ -39,6 +39,10 @@ main {
     align-items: center;
 }
 
+.h1-title {
+    display: none;
+}
+
 .wrapper {
     margin: 0 auto;
     display: flex;
